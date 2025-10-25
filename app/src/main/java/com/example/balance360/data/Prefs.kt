@@ -116,7 +116,7 @@ class Prefs(context: Context) {
         sp.edit().putString(KEY_NOTIFICATIONS, gson.toJson(trimmed)).apply()
     }
 
-    // --- Simple local auth (demo) ---
+    // --- Simple local auth ---
     fun isLoggedIn(): Boolean = (sp.getString(KEY_USER_EMAIL, null)?.isNotEmpty() == true)
 
     fun getUserEmail(): String? = sp.getString(KEY_USER_EMAIL, null)

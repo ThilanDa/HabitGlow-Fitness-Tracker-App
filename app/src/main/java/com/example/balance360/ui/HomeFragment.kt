@@ -49,9 +49,9 @@ class HomeFragment : Fragment() {
             val tvDate = view.findViewById<TextView>(R.id.tvDate)
             val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
             val greeting = when (hour) {
-                in 5..11 -> "Good morning!"
-                in 12..16 -> "Good afternoon!"
-                else -> "Good evening!"
+                in 5..11 -> "Good Morning!"
+                in 12..16 -> "Good Afternoon!"
+                else -> "Good Evening!"
             }
             tvGreeting.text = greeting
             val df = SimpleDateFormat("EEEE, MMMM d, yyyy", Locale.getDefault())
