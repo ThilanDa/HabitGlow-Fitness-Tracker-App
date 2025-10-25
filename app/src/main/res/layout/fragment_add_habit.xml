@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    tools:context=".ui.AddHabitFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Top bar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#8A000000"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Habit"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Habit name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habit Name"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etHabitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="e.g., Drink water, Exercise, Read"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/etHabitDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Optional description"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Icon and Color placeholders for future extension -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icon"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+        <LinearLayout
+            android:id="@+id/iconRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView android:id="@+id/iconWater" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="💧" android:textSize="18sp" android:background="@drawable/icon_choice_bg_selector" android:tag="💧"/>
+            <TextView android:id="@+id/iconRun" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="🏃" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="🏃"/>
+            <TextView android:id="@+id/iconBooks" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="📚" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="📚"/>
+            <TextView android:id="@+id/iconMeditate" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="🧘" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="🧘"/>
+            <TextView android:id="@+id/iconSalad" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="🥗" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="🥗"/>
+            <TextView android:id="@+id/iconSleep" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="😴" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="😴"/>
+            <TextView android:id="@+id/iconMuscle" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="💪" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="💪"/>
+            <TextView android:id="@+id/iconTarget" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center" android:text="🎯" android:textSize="18sp" android:layout_marginStart="8dp" android:background="@drawable/icon_choice_bg_selector" android:tag="🎯"/>
+        </LinearLayout>
+
+        <!-- Timer selection -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabNone"
+                android:text="None"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabTimerItem"
+                android:text="Timer"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- Repeat: days of week -->
+        <TextView
+            android:id="@+id/tvRepeatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fillViewport="false"
+            android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/llWeekdays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/cbSun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sun" android:tag="1"/>
+                <CheckBox android:id="@+id/cbMon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" android:tag="2" android:layout_marginStart="8dp"/>
+                <CheckBox android:id="@+id/cbTue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" android:tag="3" android:layout_marginStart="8dp"/>
+                <CheckBox android:id="@+id/cbWed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wed" android:tag="4" android:layout_marginStart="8dp"/>
+                <CheckBox android:id="@+id/cbThu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thu" android:tag="5" android:layout_marginStart="8dp"/>
+                <CheckBox android:id="@+id/cbFri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" android:tag="6" android:layout_marginStart="8dp"/>
+                <CheckBox android:id="@+id/cbSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sat" android:tag="7" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Timer duration (shown when Timer tab selected) -->
+        <LinearLayout
+            android:id="@+id/llTimerDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration (min)"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/etTimerMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:inputType="number"
+                android:ems="4"
+                android:hint="25"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSetReminder"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Reminder"
+            android:layout_marginTop="12dp"
+            app:strokeColor="@color/color_primary"
+            app:iconPadding="8dp" />
+
+        <!-- Pill list of selected reminders -->
+        <TextView
+            android:id="@+id/tvReminderList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#99000000"
+            android:text=""/>
+
+    </LinearLayout>
+</ScrollView>
+

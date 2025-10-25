@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White top-left to light green bottom-right gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/white"
+                android:endColor="@color/brand_light_green"
+                android:angle="315"/>
+        </shape>
+    </item>
+</layer-list>

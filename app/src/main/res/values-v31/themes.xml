@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ system splash configuration -->
+    <style name="Base.Theme.Balance360" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Keep existing palette inherited from values/themes.xml via merge -->
+        <!-- Use BetterMe logo for OS splash screen icon -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logoimg</item>
+        <!-- System splash supports only solid color; use brand light green -->
+        <item name="android:windowSplashScreenBackground">@color/brand_light_green</item>
+        <!-- Optional duration tweak -->
+        <item name="android:windowSplashScreenAnimationDuration">300</item>
+    </style>
+
+    <style name="Theme.Balance360" parent="Base.Theme.Balance360"/>
+</resources>

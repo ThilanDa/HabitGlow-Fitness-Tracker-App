@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svMood"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    tools:context=".ui.MoodFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- Top bar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@color/color_primary"
+            android:padding="16dp"
+            android:clipToPadding="false"
+            android:elevation="2dp">
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                android:alpha="0.9"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:id="@+id/tvTitleMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How are you feeling today?"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@color/color_primary"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick your mood"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Emoji grid in card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+            <GridLayout
+                android:id="@+id/gridEmojis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="3"
+                android:padding="12dp">
+
+            <!-- 10 emoji options -->
+            <LinearLayout android:id="@+id/moodHappy" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😊"/>
+                <TextView style="@style/MoodLabel" android:text="Happy"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodExcited" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😄"/>
+                <TextView style="@style/MoodLabel" android:text="Excited"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodCalm" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😌"/>
+                <TextView style="@style/MoodLabel" android:text="Calm"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodLoved" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="🥰"/>
+                <TextView style="@style/MoodLabel" android:text="Loved"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodSad" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😔"/>
+                <TextView style="@style/MoodLabel" android:text="Sad"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodAngry" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😠"/>
+                <TextView style="@style/MoodLabel" android:text="Angry"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodAnxious" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😰"/>
+                <TextView style="@style/MoodLabel" android:text="Anxious"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodTired" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😴"/>
+                <TextView style="@style/MoodLabel" android:text="Tired"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodConfident" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="😎"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/moodThoughtful" style="@style/MoodChoiceStyle" android:layout_columnWeight="1">
+                <TextView style="@style/MoodEmoji" android:text="🤔"/>
+                <TextView style="@style/MoodLabel" android:text="Thoughtful"/>
+            </LinearLayout>
+            </GridLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Preview banner -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvPreviewEmoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="😊"
+                    android:textSize="28sp"/>
+                <TextView
+                    android:id="@+id/tvPreviewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feeling Happy"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a note (optional)"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Note in card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+            <EditText
+            android:id="@+id/etNote"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="What's on your mind?"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:gravity="top|start"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Bottom action row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            <TextView
+                android:id="@+id/btnCancelBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#8A000000"
+                android:layout_marginEnd="16dp"/>
+            <TextView
+                android:id="@+id/btnSaveMoodBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Mood"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@color/color_primary"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"/>
+        </LinearLayout>
+
+        <!-- CalendarView -->
+        <!-- Calendar in card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+            <CalendarView
+            android:id="@+id/calendarMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Journal header -->
+        <TextView
+            android:id="@+id/tvJournalHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Entries"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Inline journal list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMoodHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

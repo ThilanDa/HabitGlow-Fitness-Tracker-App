@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Balance360" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Green & White palette -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+        <item name="android:colorBackground">@color/color_background</item>
+        <item name="colorOnBackground">@color/color_on_background</item>
+
+        <!-- Make all buttons green by default -->
+        <item name="buttonStyle">@style/AppButtonStyle</item>
+        <item name="materialButtonStyle">@style/AppMaterialButtonStyle</item>
+        <item name="materialButtonOutlinedStyle">@style/AppMaterialOutlinedButtonStyle</item>
+    </style>
+
+    <style name="Theme.Balance360" parent="Base.Theme.Balance360" />
+</resources>

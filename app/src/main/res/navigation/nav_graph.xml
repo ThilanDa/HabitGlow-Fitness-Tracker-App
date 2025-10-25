@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.balance360.ui.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/habitsFragment"
+        android:name="com.example.balance360.ui.HabitsFragment"
+        android:label="@string/nav_habits"
+        tools:layout="@layout/fragment_habits" >
+        <action
+            android:id="@+id/action_habitsFragment_to_addHabitFragment"
+            app:destination="@id/addHabitFragment" />
+        <action
+            android:id="@+id/action_habitsFragment_to_editHabitFragment"
+            app:destination="@id/editHabitFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moodFragment"
+        android:name="com.example.balance360.ui.MoodFragment"
+        android:label="@string/nav_mood"
+        tools:layout="@layout/fragment_mood" />
+
+    <fragment
+        android:id="@+id/hydrationFragment"
+        android:name="com.example.balance360.ui.HydrationFragment"
+        android:label="@string/nav_hydration"
+        tools:layout="@layout/fragment_hydration" />
+
+    <fragment
+        android:id="@+id/tipsFragment"
+        android:name="com.example.balance360.ui.TipsFragment"
+        android:label="@string/nav_tips"
+        tools:layout="@layout/fragment_tips" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.balance360.ui.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/addHabitFragment"
+        android:name="com.example.balance360.ui.AddHabitFragment"
+        android:label="Add Habit"
+        tools:layout="@layout/fragment_add_habit" />
+
+    <fragment
+        android:id="@+id/editHabitFragment"
+        android:name="com.example.balance360.ui.EditHabitFragment"
+        android:label="@string/edit_habit"
+        tools:layout="@layout/fragment_add_habit">
+        <argument
+            android:name="habitId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.balance360.ui.NotificationsFragment"
+        android:label="@string/notifications_title"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>

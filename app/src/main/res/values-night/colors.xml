@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark palette overrides -->
+    <color name="color_primary">#66BB6A</color>
+    <color name="color_on_primary">#FF000000</color>
+    <color name="color_secondary">#81C784</color>
+    <color name="color_on_secondary">#FF000000</color>
+
+    <!-- Backgrounds and surfaces for dark mode -->
+    <color name="color_background">#FF121212</color>
+    <color name="color_on_background">#FFFFFFFF</color>
+    <color name="color_surface">#FF1E1E1E</color>
+    <color name="color_on_surface">#FFFFFFFF</color>
+
+    <!-- Page background (dark) -->
+    <color name="page_bg">#FF0F1114</color>
+</resources>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">HabitGlow</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_habits">Habits</string>
+    <string name="nav_mood">Mood</string>
+    <string name="nav_hydration">Hydration</string>
+    <string name="nav_tips">Tips</string>
+    <string name="nav_settings">Settings</string>
+    <string name="channel_hydration_name">Hydration Reminders</string>
+    <string name="channel_hydration_desc">Periodic reminders to drink water</string>
+    <string name="hydration_title">Time to hydrate</string>
+    <string name="hydration_text">Drink a glass of water to stay refreshed</string>
+    <string name="hydration_interval_label">Reminder interval (minutes, min 15)</string>
+    <string name="start_reminders">Start Reminders</string>
+    <string name="stop_reminders">Stop Reminders</string>
+    <string name="reminders_running">Hydration reminders are running</string>
+    <string name="reminders_stopped">Hydration reminders are stopped</string>
+    <!-- Habits -->
+
+    <!-- PIN strings -->
+    <string name="pin_set_title">Set your PIN</string>
+    <string name="pin_set_hint">Enter and confirm a 4-digit PIN</string>
+    <string name="pin_enter_title">Enter PIN</string>
+    <string name="pin_enter_hint">4-digit PIN</string>
+    <string name="pin_4_digits">PIN must be 4 digits</string>
+    <string name="pin_mismatch">PINs do not match</string>
+    <string name="pin_set_success">PIN set successfully</string>
+    <string name="pin_incorrect">Incorrect PIN</string>
+    <string name="action_set_pin">Set PIN</string>
+    <string name="action_unlock">Unlock</string>
+    <string name="hint_new_habit">Add a new habit</string>
+    <string name="add">Add</string>
+    <string name="progress_today">Today progress: %1$d/%2$d (%3$d%%)</string>
+    <string name="delete">Delete</string>
+    <!-- Mood -->
+    <string name="select_emoji">Select mood</string>
+    <string name="hint_mood_note">Optional note</string>
+    <string name="log_mood">Log Mood</string>
+    <string name="share_mood_summary">Share weekly mood summary</string>
+    <!-- Home -->
+    <string name="home_title">Today Overview</string>
+    <string name="home_habits_completed">Habits completed: %1$d/%2$d</string>
+    <!-- Habits page header -->
+    <string name="daily_habits">Daily Habits</string>
+    <string name="track_subtitle">Track your wellness journey</string>
+    <string name="daily_goal_progress">Daily Goal Progress</string>
+    <string name="add_new_habit">Add New Habit</string>
+    <string name="no_habits">No habits yet</string>
+    <string name="empty_habits_subtitle">Start building healthy routines by adding your first habit</string>
+    <!-- Settings -->
+    <string name="settings_daily_goal">Daily water goal (ml)</string>
+    <string name="settings_dark_theme">Dark theme</string>
+    <string name="save">Save</string>
+    
+    <!-- Add Habit: reminder -->
+    <string name="set_reminder">Set Reminder</string>
+    <string name="set_reminder_time">Set Reminder: %1$s</string>
+    <string name="reminders_prefix">Reminders: %1$s</string>
+
+    <!-- Habit reminders channel and messages -->
+    <string name="channel_habits_name">Habit Reminders</string>
+    <string name="channel_habits_desc">Daily reminders for your habits</string>
+    <string name="reminder_title">Habit Reminder</string>
+    <string name="reminder_text">Time for: %1$s</string>
+
+    <!-- Notifications screen -->
+    <string name="notifications_title">Notifications</string>
+    <string name="edit_habit">Edit Habit</string>
+
+    <!-- Habits: streaks -->
+    <string name="streak_days">%1$d-day streak</string>
+
+    <!-- Timer -->
+    <string name="start">Start</string>
+    <string name="timer_title">%1$s Timer</string>
+    <string name="timer_remaining">%1$02d:%2$02d remaining</string>
+</resources>

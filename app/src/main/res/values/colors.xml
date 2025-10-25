@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core palette -->
+    <color name="color_primary">#9D4EDD</color> <!-- Purple -->
+    <color name="color_on_primary">#FFFFFFFF</color>
+    <color name="color_secondary">#90CAF9</color> <!-- Light Blue 300 -->
+    <color name="color_on_secondary">#FFFFFFFF</color>
+
+    <color name="color_background">#FFFFFFFF</color>
+    <color name="color_on_background">#FF000000</color>
+    <color name="color_surface">#FFFFFFFF</color>
+    <color name="color_on_surface">#FF1B1B1B</color>
+
+    <!-- Support -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ash_gray">#9E9E9E</color>
+    <color name="water_blue">#1976D2</color>
+
+    <!-- Pastel card backgrounds -->
+    <color name="card_blue_bg">#EAF3FF</color>
+    <color name="card_green_bg">#EAF7EE</color>
+    <color name="card_pink_bg">#FDECEF</color>
+    <color name="card_yellow_bg">#FFF7E5</color>
+
+    <!-- Icon accent colors -->
+    <color name="icon_blue">#9D4EDD</color>
+    <color name="icon_teal">#26A69A</color>
+    <color name="icon_red">#EF5350</color>
+    <color name="icon_amber">#FFA000</color>
+
+    <!-- Page background (light gray/blue) -->
+    <color name="page_bg">#F6F9FE</color>
+
+    <!-- Brand light blue shade for subtle accents -->
+    <color name="brand_light_green">#D7E9FF</color>
+</resources>

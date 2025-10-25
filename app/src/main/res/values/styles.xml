@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Legacy Button (android.widget.Button) -->
+    <style name="AppButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/color_primary</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- MaterialButton default (Widget.MaterialComponents.Button) -->
+    <style name="AppMaterialButtonStyle" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/color_primary</item>
+        <item name="android:textColor">@color/color_on_primary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <!-- Outlined variant -->
+    <style name="AppMaterialOutlinedButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/color_primary</item>
+        <item name="iconTint">@color/color_primary</item>
+        <item name="android:textColor">@color/color_primary</item>
+    </style>
+
+    <!-- TextButton variant -->
+    <style name="AppMaterialTextButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="iconTint">@color/color_primary</item>
+    </style>
+ 
+    <!-- Circle shape overlay for ShapeableImageView -->
+    <style name="ShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.Circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
